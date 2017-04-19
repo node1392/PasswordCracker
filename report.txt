@@ -1,0 +1,19 @@
+I used Python 2.7 to develop the password cracker utility software. Python is fast and robust. It has built-in libraries for threading and hashlib (useful for sha256). Other than this, the compulsory code structure of Python makes the code more readable than any other programming language.To run the application, user will need Python 2.7 installed in the computer. The application can be started by using following command:Usage: cracker.py passwords_file results_file timeout salt(Example: without salt)C:\Python27\python.exe cracker.py passwords_nosalt-1.txt results_nosalt.txt 60(Example: with salt)C:\Python27\python.exe cracker.py passwords_salt-1.txt results_salt.txt 60 _1984The password cracker utility uses following approaches to crack the passwords:* Dictionary attack:	For this, I have used "john.txt" which is downloaded from "https://wiki.skullsecurity.org/Passwords" page.	* Brute-force:	For this, I created brute-force lists:	1. "123456"	2. "abcdef" (3 to 6 characters)	3. "pqr"	4. "xyz"	* LeetSpeak:	I used this leets: a-4, e-3, g-6, i-1, o-0, s-5, t-7. Each item in the dictionary is replaced by the matching characters to crack the passwords. In the same way I also created a brute-force list using "4bcd3f" to crack the passwords.	* Include a small number of digits:	I created a brute-force list of numbers "123456" (two and three digits). This list is used to append two-three digits to all the items from all the lists mentioned till now. 	* Multithreading:	I created ten (10) methods for cracking the passwords using different approaches (dictionary, brute-force, leets, etc.). Each method is run using a separate thread, which makes the application faster.
+
+
+What could system designers do to significantly hinder cracking efforts from anyone that obtains their password database?
+
+Add salt to the password before hashing.
+
+
+What does adding salt achieve?
+
+hash("hello")                    = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+hash("hello" + "QxLUF1bgIAdeQX") = 9e209040c863f84a31e719795b2577523954739fe5ed3b58a75cff2127075ed1
+hash("hello" + "bv5PehSMfV11Cd") = d1d3ec2e6f20fd420d50e2642992841d8338a314b8ea157c9e18477aaef226ab
+hash("hello" + "YYLmfY6IehjZMQ") = a49670c3c18b9e079b9cfaf51634f563dc8ae3070db2c4a8544305df1b60f007
+
+
+We can randomize the hashes by appending or prepending a random string, called a salt, to the password before hashing. As shown in the example above, this makes the same password hash into a completely different string every time. To check if a password is correct, we need the salt, so it is usually stored in the user account database along with the hash, or as part of the hash string itself.
+
+The salt doesn’t need to be secret. Just by randomizing the hashes, lookup tables, reverse lookup tables, and rainbow tables become ineffective. An attacker won't know in advance what the salt will be, so they can't pre-compute a lookup table or rainbow table. If each user's password is hashed with a different salt, the reverse lookup table attack won't work either.	

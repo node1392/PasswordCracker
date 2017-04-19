@@ -1,0 +1,8 @@
+Cracked: 86091ee62cec2d4b8d2d06b50db1d90e55ae397482b826f60f36787d87840c43, Password: bob_1984
+Cracked: 1673faaeaa938ee1d293c99ecdb06611e963dc3826b49ea3ba5a9eb39c5dc53d, Password: b0b_1984
+Cracked: b27529e31a18b6ea47bcf493785d7e249024d18d5a634afa020cfbb3a67ef48c, Password: william_1984
+Cracked: 52d31db6cf1f04b529a4165af35300bcbf5457bfcb8e5742d75627d39ee5283a, Password: 123321_1984
+Cracked: f238a54a76225673d91c4ae082f01af6cc512ebb458a2e3556ddb5f559bee018, Password: 181818_1984
+Cracked: 86b3f9ca622e4a96902acce346ab9f3014607fd9fc49f4c1d1d7ac6469fbdd9e, Password: jason1_1984
+Cracked: 654c2c77f73847d3bfb4bd72bf9c3db38176fa2ea5b5ab7aeb26bc1be424ac0e, Password: 123abc_1984
+Total cracked: 7
