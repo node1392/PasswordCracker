@@ -1,10 +1,3 @@
-"""
-Edrick Ramos
-Assignment  - Password Cracker
-Dr. Portokalidis
-CS 576
-I pledge my honor that I have abided by the Stevens Honor System
-"""
 
 import hashlib
 import os
