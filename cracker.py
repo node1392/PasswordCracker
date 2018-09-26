@@ -1,9 +1,6 @@
 
 import hashlib
 import os
-# returns a translation table that maps each character in the
-# intabstring into the character at the same position in the outtab string
-# then the table is passed to the translate function
 from string import maketrans
 import threading
 import time
