@@ -430,7 +430,7 @@ def crackListPQR(stopEvent):
             
             updateGenerated()
             
-            # checks if hashed password matches the password in passwordsFile,
+            # checks if hashed password matches the password in passwordFile,
             # if it does, writes the cracked password to results file
             if hashed == password:
                 solved.append(password)
